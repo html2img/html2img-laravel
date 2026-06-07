@@ -119,7 +119,6 @@ Reach the API through the `Html2img` facade. Each method returns a readonly `Htm
 ```php
 use Html2img\Laravel\Facades\Html2img;
 use Html2img\Request\HtmlRequest;
-use Html2img\Enum\Format;
 
 $response = Html2img::html(new HtmlRequest(
     html: view('og.post', ['post' => $post])->render(),
@@ -127,7 +126,6 @@ $response = Html2img::html(new HtmlRequest(
     width: 1200,
     height: 630,
     dpi: 2,          // retina
-    format: Format::Png,
 ));
 
 return $response->url; // https://i.html2img.com/abc123def456.png
@@ -242,7 +240,6 @@ Both `HtmlRequest` and `ScreenshotRequest` accept the following. Any option left
 | `webhookUrl`       | string    | [webhook-url](https://html2img.com/docs/parameters/webhook-url)            |
 | `msDelay`          | int       | [ms_delay](https://html2img.com/docs/parameters/ms_delay) (1 to 5000)      |
 | `waitForSelector`  | string    | [wait_for_selector](https://html2img.com/docs/parameters/wait_for_selector) |
-| `format`           | `Format`  | `Format::Png` (default) or `Format::Pdf`                                    |
 
 `ScreenshotRequest` also accepts [`selector`](https://html2img.com/docs/parameters/selector) to crop the capture to a single element. `HtmlRequest` does not, since you control the markup.
 
