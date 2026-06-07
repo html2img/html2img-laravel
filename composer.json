@@ -1,0 +1,93 @@
+{
+    "name": "html2img/html2img-laravel",
+    "description": "Official Laravel integration for the html2img HTML-to-image API: a facade, config and Storage helpers around the html2img PHP SDK.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "html2img",
+        "html-to-image",
+        "html-to-png",
+        "html-to-pdf",
+        "screenshot",
+        "screenshot-api",
+        "url-to-image",
+        "og-image",
+        "open-graph",
+        "image-generation",
+        "facade",
+        "api-client"
+    ],
+    "homepage": "https://html2img.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "html2img",
+            "email": "info@html2img.com",
+            "homepage": "https://html2img.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/html2img/html2img-laravel/issues",
+        "source": "https://github.com/html2img/html2img-laravel",
+        "docs": "https://html2img.com/docs/usage/laravel",
+        "email": "info@html2img.com"
+    },
+    "require": {
+        "php": "^8.3",
+        "html2img/html2img-php": "^1.0",
+        "illuminate/contracts": "^11.0 || ^12.0",
+        "illuminate/support": "^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0 || ^10.0",
+        "pestphp/pest": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Html2img\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Html2img\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "stan": "phpstan analyse",
+        "lint": "pint --test",
+        "format": "pint",
+        "check": [
+            "@lint",
+            "@stan",
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run the Pest test suite.",
+        "stan": "Run PHPStan static analysis.",
+        "lint": "Check code style with Pint.",
+        "format": "Fix code style with Pint.",
+        "check": "Run lint, static analysis and the test suite."
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Html2img\\Laravel\\Html2imgServiceProvider"
+            ],
+            "aliases": {
+                "Html2img": "Html2img\\Laravel\\Facades\\Html2img"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
