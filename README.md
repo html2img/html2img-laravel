@@ -23,6 +23,7 @@ Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts
 - [Usage](#usage)
   - [Render HTML](#render-html)
   - [Capture a screenshot](#capture-a-screenshot)
+  - [Generate a PDF](#generate-a-pdf)
   - [Render a template](#render-a-template)
 - [Saving renders to a disk](#saving-renders-to-a-disk)
 - [Queues and jobs](#queues-and-jobs)
@@ -151,9 +152,27 @@ $response = Html2img::screenshot(new ScreenshotRequest(
 ));
 ```
 
+### Generate a PDF
+
+Set `format` to `Format::Pdf` on either request and the render comes back as an A4 portrait vector PDF instead of a PNG: text stays selectable and searchable, webfonts are embedded and long content paginates automatically. The API ignores `width`, `height`, `dpi`, `fullpage` and `selector` in PDF mode, and the response `url` points at a `.pdf` file. One credit, the same as an image. See the [`format` parameter docs](https://html2img.com/docs/parameters/format).
+
+```php
+use Html2img\Enum\Format;
+use Html2img\Laravel\Facades\Html2img;
+use Html2img\Request\HtmlRequest;
+
+$response = Html2img::html(new HtmlRequest(
+    html: view('invoices.show', ['invoice' => $invoice])->render(),
+    format: Format::Pdf,
+));
+
+// Store it like any other render
+$path = Html2img::store($response, "invoices/{$invoice->number}.pdf");
+```
+
 ### Render a template
 
-`POST /api/v1/templates/{slug}`. Render one of the built-in [templates](https://html2img.com/templates) from a JSON data payload. The data is validated server-side per template.
+`POST /api/v1/templates/{slug}`. Render one of the built-in [templates](https://html2img.com/templates) from a JSON data payload. The data is validated server-side per template. Templates output PNG only; `format` is not available on template renders.
 
 ```php
 use Html2img\Laravel\Facades\Html2img;
@@ -240,6 +259,7 @@ Both `HtmlRequest` and `ScreenshotRequest` accept the following. Any option left
 | `webhookUrl`       | string    | [webhook-url](https://html2img.com/docs/parameters/webhook-url)            |
 | `msDelay`          | int       | [ms_delay](https://html2img.com/docs/parameters/ms_delay) (1 to 5000)      |
 | `waitForSelector`  | string    | [wait_for_selector](https://html2img.com/docs/parameters/wait_for_selector) |
+| `format`           | `Format`  | [format](https://html2img.com/docs/parameters/format): `Format::Png` (default) or `Format::Pdf`. PDF output is A4 portrait and ignores the sizing options above. |
 
 `ScreenshotRequest` also accepts [`selector`](https://html2img.com/docs/parameters/selector) to crop the capture to a single element. `HtmlRequest` does not, since you control the markup.
 
