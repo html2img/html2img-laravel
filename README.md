@@ -8,7 +8,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/html2img/html2img-laravel)](https://packagist.org/packages/html2img/html2img-laravel)
 [![License](https://img.shields.io/packagist/l/html2img/html2img-laravel)](LICENSE)
 
-The official [Laravel](https://laravel.com) integration for the [html2img.com](https://html2img.com) API. Turn HTML and CSS into images, capture screenshots of live URLs, and render named templates, all behind a clean facade with zero-config auto-discovery.
+The official [Laravel](https://laravel.com) integration for the [HTML to Image API](https://html2img.com). Turn HTML and CSS into images, capture screenshots of live URLs, and render named templates, all behind a clean facade with zero-config auto-discovery.
 
 It wraps the framework-agnostic [html2img PHP SDK](https://packagist.org/packages/html2img/html2img-php) ([source](https://github.com/html2img/html2img-php)) and adds the Laravel pieces you would otherwise write yourself: a service provider, a published config file, a facade, container bindings, an artisan health check, and one-line saving of a render to any [filesystem disk](https://laravel.com/docs/filesystem).
 
