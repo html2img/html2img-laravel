@@ -47,7 +47,7 @@ Browse the [full template library](https://html2img.com/templates), or try the n
 ## Requirements
 
 - PHP 8.3 or newer
-- Laravel 11 or 12
+- Laravel 11, 12 or 13
 - A html2img API key, issued per account from your [dashboard](https://app.html2img.com/register)
 
 ## Installation
