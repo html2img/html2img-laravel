@@ -29,7 +29,7 @@
     "support": {
         "issues": "https://github.com/html2img/html2img-laravel/issues",
         "source": "https://github.com/html2img/html2img-laravel",
-        "docs": "https://html2img.com/docs/usage/laravel",
+        "docs": "https://html2img.com/integrations/laravel/",
         "email": "info@html2img.com"
     },
     "require": {

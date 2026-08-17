@@ -12,7 +12,7 @@ The official [Laravel](https://laravel.com) integration for the [HTML to Image A
 
 It wraps the framework-agnostic [html2img PHP SDK](https://packagist.org/packages/html2img/html2img-php) ([source](https://github.com/html2img/html2img-php)) and adds the Laravel pieces you would otherwise write yourself: a service provider, a published config file, a facade, container bindings, an artisan health check, and one-line saving of a render to any [filesystem disk](https://laravel.com/docs/filesystem).
 
-Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts and inline JavaScript behave exactly as they do in the browser. The full API reference lives in the [documentation](https://html2img.com/docs), with a Laravel-specific guide at [html2img.com/docs/usage/laravel](https://html2img.com/docs/usage/laravel).
+Every render runs in real Chrome, so flexbox, grid, custom properties, web fonts and inline JavaScript behave exactly as they do in the browser. The full API reference lives in the [documentation](https://html2img.com/docs), with a Laravel-specific guide at [html2img.com/integrations/laravel](https://html2img.com/integrations/laravel/).
 
 ## Contents
 
@@ -355,12 +355,12 @@ It prints the resulting image URL and your remaining credits, or a clear error i
 ## Other languages
 
 Not on Laravel? The same API has worked guides for
-[plain PHP](https://html2img.com/docs/usage/php),
-[Ruby on Rails](https://html2img.com/docs/usage/rails),
-[Python](https://html2img.com/docs/usage/python),
-[JavaScript and Node.js](https://html2img.com/docs/usage/javascript),
-[React](https://html2img.com/docs/usage/react) and
-[Vue](https://html2img.com/docs/usage/vue).
+[plain PHP](https://html2img.com/integrations/php/),
+[Ruby and Rails](https://html2img.com/integrations/ruby/),
+[Python](https://html2img.com/integrations/python/),
+[JavaScript and Node.js](https://html2img.com/integrations/javascript/),
+[React](https://html2img.com/integrations/javascript/#react-and-nextjs) and
+[Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt).
 
 ## Development
 
@@ -375,7 +375,7 @@ ddev exec vendor/bin/pint --test
 
 ## Links
 
-[Website](https://html2img.com) · [Documentation](https://html2img.com/docs) · [Laravel guide](https://html2img.com/docs/usage/laravel) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing) · [PHP SDK](https://github.com/html2img/html2img-php)
+[Website](https://html2img.com) · [Documentation](https://html2img.com/docs) · [Laravel guide](https://html2img.com/integrations/laravel/) · [Templates](https://html2img.com/templates) · [Tools](https://html2img.com/tools) · [Features](https://html2img.com/features) · [Comparisons](https://html2img.com/compare) · [Articles](https://html2img.com/articles) · [Pricing](https://html2img.com/pricing) · [PHP SDK](https://github.com/html2img/html2img-php)
 
 ## Licence
 
