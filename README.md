@@ -50,6 +50,8 @@ Browse the [full template library](https://html2img.com/templates), or try the n
 - Laravel 11, 12 or 13
 - A html2img API key, issued per account from your [dashboard](https://app.html2img.com/register)
 
+Every account starts with 50 free credits and no card is needed to get started. Free-tier renders are hosted for seven days; on any paid [plan](https://html2img.com/pricing) they are hosted permanently, including everything you rendered before upgrading.
+
 ## Installation
 
 ```bash
@@ -354,13 +356,14 @@ It prints the resulting image URL and your remaining credits, or a clear error i
 
 ## Other languages
 
-Not on Laravel? The same API has worked guides for
-[plain PHP](https://html2img.com/integrations/php/),
-[Ruby and Rails](https://html2img.com/integrations/ruby/),
-[Python](https://html2img.com/integrations/python/),
-[JavaScript and Node.js](https://html2img.com/integrations/javascript/),
-[React](https://html2img.com/integrations/javascript/#react-and-nextjs) and
-[Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt).
+The same API has official packages for other languages and platforms, all available now:
+
+- **SDKs:** [PHP](https://github.com/html2img/html2img-php) · [JavaScript and TypeScript](https://github.com/html2img/html2img-js) · [Python](https://github.com/html2img/html2img-python) · [Ruby](https://github.com/html2img/html2img-ruby)
+- **Frameworks:** [Django](https://github.com/html2img/html2img-django)
+- **CMS plugins:** [WordPress](https://wordpress.org/plugins/html2img/) · [Statamic](https://github.com/html2img/statamic-og-images) · [Craft CMS](https://plugins.craftcms.com/og-images)
+- **Automation and AI:** [GitHub Action](https://github.com/marketplace/actions/html-to-image) · [MCP server](https://html2img.com/mcp/) (paid plans)
+
+There are also worked guides for [React](https://html2img.com/integrations/javascript/#react-and-nextjs) and [Vue](https://html2img.com/integrations/javascript/#vue-and-nuxt), and anything that can make an HTTP request works with the API. Every integration is listed on the [integrations hub](https://html2img.com/integrations/).
 
 ## Development
 
