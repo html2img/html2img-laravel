@@ -1,6 +1,6 @@
-[![html2img — HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
+[![HTML to Image (html2img): HTML to image API, rendered in real Chrome](https://html2img.com/og-image.png)](https://html2img.com)
 
-# html2img for Laravel
+# HTML to Image (html2img) for Laravel
 
 [![Packagist Version](https://img.shields.io/packagist/v/html2img/html2img-laravel)](https://packagist.org/packages/html2img/html2img-laravel)
 [![PHP Version](https://img.shields.io/packagist/php-v/html2img/html2img-laravel)](https://packagist.org/packages/html2img/html2img-laravel)
